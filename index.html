@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Flight</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Find Your Flight</h1>
+      <p class="subtitle">
+        Enter a disc name and press <kbd>Enter</kbd> to find similar discs from other manufacturers.
+      </p>
+
+      <label for="disc-input" class="sr-only">Disc name</label>
+      <input
+        id="disc-input"
+        class="search-field"
+        type="text"
+        placeholder="Try: Destroyer, Buzzz, Zone, Grace..."
+        autocomplete="off"
+      />
+
+      <label for="top-disc-select" class="sr-only">Search by top discs</label>
+      <select id="top-disc-select" class="search-field" aria-label="Search by top selling disc molds">
+        <option value="" selected>Search by the top discs...</option>
+      </select>
+
+      <section id="results" aria-live="polite" class="results empty">
+        <p>Type a disc name and press Enter to compare flight numbers.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
