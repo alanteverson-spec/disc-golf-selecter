@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8fb6d9" />
+      <stop offset="55%" stop-color="#d5e5f2" />
+      <stop offset="100%" stop-color="#eef4e4" />
+    </linearGradient>
+    <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5e7e58" />
+      <stop offset="100%" stop-color="#3f5c3a" />
+    </linearGradient>
+    <linearGradient id="hillMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#486741" />
+      <stop offset="100%" stop-color="#2f4a2f" />
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6f8a55" />
+      <stop offset="100%" stop-color="#4a633b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)" />
+  <circle cx="250" cy="200" r="78" fill="#ffe7a8" opacity="0.9" />
+
+  <path d="M0 470 C 260 360, 510 350, 790 420 C 1100 500, 1460 470, 1920 360 L 1920 1080 L 0 1080 Z" fill="url(#hillBack)" />
+  <path d="M0 610 C 330 520, 700 560, 980 650 C 1260 740, 1560 710, 1920 590 L 1920 1080 L 0 1080 Z" fill="url(#hillMid)" />
+  <path d="M0 760 C 260 700, 620 710, 980 780 C 1320 850, 1650 840, 1920 790 L 1920 1080 L 0 1080 Z" fill="url(#ground)" />
+
+  <g opacity="0.8" fill="#2d492a">
+    <polygon points="150,640 190,540 230,640" /><rect x="186" y="640" width="8" height="40" />
+    <polygon points="330,690 375,575 420,690" /><rect x="371" y="690" width="8" height="48" />
+    <polygon points="560,670 610,545 660,670" /><rect x="606" y="670" width="8" height="44" />
+    <polygon points="760,720 805,600 850,720" /><rect x="801" y="720" width="8" height="48" />
+    <polygon points="980,700 1030,580 1080,700" /><rect x="1026" y="700" width="8" height="48" />
+    <polygon points="1220,690 1265,575 1310,690" /><rect x="1261" y="690" width="8" height="48" />
+    <polygon points="1460,720 1510,600 1560,720" /><rect x="1506" y="720" width="8" height="50" />
+    <polygon points="1710,680 1755,565 1800,680" /><rect x="1751" y="680" width="8" height="46" />
+  </g>
+</svg>
