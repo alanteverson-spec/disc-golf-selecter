@@ -25,7 +25,7 @@ body {
 
 .app {
   width: min(760px, 100%);
-  background: #e2e2e2;
+  background: #ffffff;
   border: 1px solid rgba(216, 224, 236, 0.9);
   border-radius: 16px;
   padding: 1.25rem;
@@ -41,6 +41,40 @@ h1 {
 .subtitle {
   margin: 0.5rem 0 1rem;
   color: var(--muted);
+}
+
+.search-toggle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.toggle-btn {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.98rem;
+  font-weight: 500;
+  padding: 0 0 0.38rem;
+  border-bottom: 4px solid transparent;
+  cursor: pointer;
+}
+
+.toggle-btn.is-active {
+  font-weight: 700;
+  border-bottom-color: #f2cb2f;
+}
+
+.toggle-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+
+.is-hidden {
+  display: none;
 }
 
 .search-field {
@@ -60,7 +94,6 @@ h1 {
 
 
 #top-disc-select {
-  margin-top: 0.65rem;
   appearance: auto;
 }
 

@@ -265,6 +265,8 @@ const discs = Object.entries(manufacturerCatalog).flatMap(([manufacturer, molds]
 const input = document.querySelector("#disc-input");
 const results = document.querySelector("#results");
 const topDiscSelect = document.querySelector("#top-disc-select");
+const toggleName = document.querySelector("#toggle-name");
+const togglePopular = document.querySelector("#toggle-popular");
 const totalManufacturers = Object.keys(manufacturerCatalog).length;
 const topSellingMolds = [
   "Destroyer",
@@ -279,6 +281,14 @@ const topSellingMolds = [
   "Luna"
 ];
 
+toggleName.addEventListener("click", () => {
+  setSearchMode("name");
+});
+
+togglePopular.addEventListener("click", () => {
+  setSearchMode("popular");
+});
+
 input.addEventListener("keydown", (event) => {
   if (event.key !== "Enter") return;
   runSearch(input.value.trim());
@@ -290,6 +300,24 @@ topDiscSelect.addEventListener("change", () => {
   input.value = selectedDisc;
   runSearch(selectedDisc);
 });
+
+function setSearchMode(mode) {
+  const useNameSearch = mode === "name";
+
+  toggleName.classList.toggle("is-active", useNameSearch);
+  togglePopular.classList.toggle("is-active", !useNameSearch);
+  toggleName.setAttribute("aria-selected", useNameSearch ? "true" : "false");
+  togglePopular.setAttribute("aria-selected", useNameSearch ? "false" : "true");
+
+  input.classList.toggle("is-hidden", !useNameSearch);
+  topDiscSelect.classList.toggle("is-hidden", useNameSearch);
+
+  if (useNameSearch) {
+    input.focus();
+  } else {
+    topDiscSelect.focus();
+  }
+}
 
 function runSearch(query) {
   if (!query) {
@@ -401,6 +429,7 @@ function populateTopDiscSelect() {
 }
 
 populateTopDiscSelect();
+setSearchMode("name");
 
 renderEmpty(
   `Type a disc name and press Enter to compare flight numbers across ${totalManufacturers} major manufacturers (${discs.length} molds loaded).`

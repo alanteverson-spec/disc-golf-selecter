@@ -13,6 +13,29 @@
         Enter a disc name and press <kbd>Enter</kbd> to find similar discs from other manufacturers.
       </p>
 
+      <div class="search-toggle" role="tablist" aria-label="Search mode">
+        <button
+          id="toggle-name"
+          class="toggle-btn is-active"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="disc-input"
+        >
+          Search by Disc Name
+        </button>
+        <button
+          id="toggle-popular"
+          class="toggle-btn"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="top-disc-select"
+        >
+          Search by Popular Molds
+        </button>
+      </div>
+
       <label for="disc-input" class="sr-only">Disc name</label>
       <input
         id="disc-input"
@@ -23,7 +46,11 @@
       />
 
       <label for="top-disc-select" class="sr-only">Search by top discs</label>
-      <select id="top-disc-select" class="search-field" aria-label="Search by top selling disc molds">
+      <select
+        id="top-disc-select"
+        class="search-field is-hidden"
+        aria-label="Search by top selling disc molds"
+      >
         <option value="" selected>Search by the top discs...</option>
       </select>
 
