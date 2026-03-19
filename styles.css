@@ -17,12 +17,7 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background-color: #dff2df;
-  background-image: url("assets/disc-golf-background.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #e2e2e2;
   font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
   padding: 1rem;
@@ -71,7 +66,6 @@ h1 {
     linear-gradient(135deg, #61758f 50%, transparent 50%);
   background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
   background-size: 6px 6px, 6px 6px;
-  background-repeat: no-repeat;
   padding-right: 2.2rem;
 }
 
